@@ -1,0 +1,63 @@
+{
+  "emulators": {
+    "default": {
+      "port": 3569,
+      "serviceAccount": "emulator-account"
+    }
+  },
+  "contracts": {
+    "NonFungibleToken": {
+      "source": "./contracts/utils/NonFungibleToken.cdc",
+      "aliases": {
+        "testnet": "631e88ae7f1d7c20",
+        "mainnet": "1d7e57aa55817448"
+      }
+    },
+    "FungibleToken": {
+      "source": "./contracts/utils/FungibleToken.cdc",
+      "aliases": {
+        "emulator": "ee82856bf20e2aa6",
+        "testnet": "9a0766d93b6608b7",
+        "mainnet": "f233dcee88fe0abe"
+      }
+    },
+    "FUSD": {
+      "source": "./contracts/utils/FUSD.cdc",
+      "aliases": {
+        "testnet": "e223d8a629e49c68",
+        "mainnet": "3c5959b568896393"
+      }
+    },
+    "FlowToken": {
+      "source": "./contracts/utils/FlowToken.cdc",
+      "aliases": {
+        "emulator": "0ae53cb6e3f42a79",
+        "testnet": "7e60df042a9c0868",
+        "mainnet": "1654653399040a61"
+      }
+    },
+    "MetadataViews": {
+      "source": "./contracts/utils/MetadataViews.cdc",
+      "aliases": {
+        "testnet": "631e88ae7f1d7c20",
+        "mainnet": "1d7e57aa55817448"
+      }
+    }
+  },
+  "networks": {
+    "emulator": "127.0.0.1:3569",
+    "mainnet": "access.mainnet.nodes.onflow.org:9000",
+    "testnet": "access.devnet.nodes.onflow.org:9000"
+  },
+  "accounts": {
+    "emulator-account": {
+      "address": "f8d6e0586b0a20c7",
+      "key": "937879e02add75b72cc0a4acbdd6b24af393751f64e53cca4e42b9c7dd2f6481"
+    }
+  },
+  "deployments": {
+    "emulator": {
+      "emulator-account": ["NonFungibleToken", "FUSD"]
+    }
+  }
+}
