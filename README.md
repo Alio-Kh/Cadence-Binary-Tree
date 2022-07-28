@@ -1,3 +1,3 @@
-# flow-contracts-tpl
+# Cadence-Binary-Tree
 
-A starter template for Flow smart contracts.
+Implementation of Binary Search Tree on Cadence
